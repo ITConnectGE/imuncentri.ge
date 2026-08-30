@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ხარისხის პოლიტიკა | იმუნიზაციის ცენტრი</title>
+  <meta name="description" content="შპს იმუნიზაციის ცენტრის ხარისხის პოლიტიკა - ISO 9001:2015 სერტიფიცირებული.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: '#0E7C6B', 'primary-dark': '#0A5C50', 'primary-light': '#14B8A6', secondary: '#1E293B', accent: '#F59E0B' }, fontFamily: { 'georgian': ['Noto Sans Georgian', 'Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-georgian text-secondary antialiased">
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"><i data-lucide="shield" class="w-6 h-6 text-white"></i></div>
+        <span class="text-xl font-bold text-secondary">იმუნიზაციის ცენტრი</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-secondary hover:text-primary transition-colors">მთავარი</a>
+        <a href="about.html" class="text-secondary hover:text-primary transition-colors">ჩვენ შესახებ</a>
+        <a href="services.html" class="text-secondary hover:text-primary transition-colors">სერვისები</a>
+        <a href="blog.html" class="text-secondary hover:text-primary transition-colors">ბლოგი</a>
+        <a href="contact.html" class="text-secondary hover:text-primary transition-colors">დაგვიკავშირდით</a>
+      </nav>
+      <div class="hidden lg:block">
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">დაჯავშნე ვიზიტი<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <button id="mobile-menu-toggle" class="lg:hidden p-2 text-secondary hover:text-primary"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-full bg-white z-50 shadow-2xl p-8">
+    <div class="flex items-center justify-between mb-10"><span class="text-lg font-bold">მენიუ</span><button id="mobile-menu-close" class="p-2"><i data-lucide="x" class="w-6 h-6"></i></button></div>
+    <nav class="flex flex-col gap-6">
+      <a href="index.html" class="text-secondary text-lg">მთავარი</a><a href="about.html" class="text-secondary text-lg">ჩვენ შესახებ</a><a href="services.html" class="text-secondary text-lg">სერვისები</a><a href="blog.html" class="text-secondary text-lg">ბლოგი</a><a href="contact.html" class="text-secondary text-lg">დაგვიკავშირდით</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="bg-primary py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center gap-2 text-white/60 text-sm mb-4">
+          <a href="index.html" class="hover:text-white transition-colors">მთავარი</a>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          <span class="text-white">ხარისხის პოლიტიკა</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white">ხარისხის პოლიტიკა</h1>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="bg-primary/5 rounded-2xl p-6 md:p-8 mb-10 border border-primary/10 flex items-start gap-4">
+          <i data-lucide="award" class="w-8 h-8 text-primary shrink-0 mt-1"></i>
+          <div>
+            <h2 class="text-xl font-bold text-secondary mb-2">შპს „იმუნიზაციის ცენტრის" ხარისხის პოლიტიკა</h2>
+            <p class="text-slate-500 text-sm">ISO 9001:2015 სერტიფიცირებული TUV-Austria-ს მიერ</p>
+          </div>
+        </div>
+
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-bold text-secondary mb-4">„იმუნიზაციის ცენტრის" მთავარი მისია</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            დაარსების დღიდან იმუნიზაციის ცენტრის მისია არის იმუნიზაციის ხელმისაწვდომობის გაზრდა მოსახლეობის სხვადასხვა ასაკობრივი ფენისთვის, კერძოდ მოზრდილი მოსახლეობისთვის, რომელიც აღარ ეკუთვნის კალენდარული აცრებით გათვალისწინებული კონტიგენტის ასაკობრივ ჯგუფს, თუმცა საჭიროებს ვაქცინაციას.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            ამ კატეგორიას მიეკუთვნება სხვადასხვა ინფექციური დაავადებების მიმართ მგრძნობიარე პირთა რისკ-ჯგუფები: სამედიცინო პერსონალი, ხანდაზმული ასაკის მოსახლეობა, ქრონიკულად მოავადე პირები, მოგზაურები, სტუდენტები, უცხო ქვეყნის მოქალაქეები და სხვა.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            იმუნიზაციის ცენტრი მოსახლეობას სთავაზობს მაღალხარისხიან მომსახურებას, გამოცდილი, ხარისხიანი და ჯანდაცვის მსოფლიო ორგანიზაციის მიერ პრეკვალიფიცირებული ვაქცინების გამოყენებით.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-10">
+            იმუნიზაციის ცენტრს განსაკუთრებული ადგილი უჭირავს ცოფის პრევენციის მიმართულებით, რასაც უზრუნველყოფს პაციენტების კომფორტზე ორიენტირებული 24 საათიანი მომსახურება და პროფესიონალი, გულისხმიერი პერსონალი.
+          </p>
+
+          <h2 class="text-2xl font-bold text-secondary mb-4">ჩვენი ხედვა ხარისხთან მიმართებაში</h2>
+          <div class="space-y-4 mb-10">
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">ევროპული სტანდარტების შესაბამისი ნორმების დანერგვა როგორც სამედიცინო, ასევე მართვის და ლოჯისტიკის მიმართულებით</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">ეფექტურობის მუდმივი გაუმჯობესება და ხარისხის მართვის სისტემის მუდმივი განახლება მაკორექტირებელი და პრევენციული ღონისძიებების ეფექტურობის ამაღლების საფუძველზე</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">ხარისხის უზრუნველყოფის სტრატეგიისა და მიზნების სწორი დაგეგმვა</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">დაინტერესებულ მხარეებზე ორიენტირება, პროცესების სწორი შეფასება და რისკების შემცირება</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-secondary mb-4">ხარისხის მიზნები იმუნიზაციის სფეროში</h2>
+          <div class="space-y-4 mb-10">
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="target" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">საკანონმდებლო მოთხოვნების ფარგლებში პაციენტთა მდგომარეობის მართვის ეროვნული გაიდლაინების/პროტოკოლების დანერგვით, სერვისების დივერსიფიკაციითა და გაუმჯობესებაზე ორიენტირებით პაციენტების კმაყოფილების მუდმივი ზრდა</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="target" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">„იმუნიზაციის ცენტრის" საქმიანობის გაუმჯობესება, სამედიცინო ინფრასტრუქტურის მუდმივი განახლება</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="target" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">იმუნიზაციის ცენტრის პერსონალის მუდმივი მომზადება-გადამზადების და სამედიცინო განათლების უწყვეტი მიწოდების სისტემის შექმნა. თანამშრომელთა მხრიდან ინოვაციების მუდმივი მოტივაცია</p>
+            </div>
+            <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-4">
+              <i data-lucide="target" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+              <p class="text-slate-600 text-sm">ხარისხის მენეჯმენტის სისტემის მუდმივი გაუმჯობესება</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div><a href="index.html" class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"><i data-lucide="shield" class="w-6 h-6 text-white"></i></div><span class="text-xl font-bold text-white">იმუნიზაციის ცენტრი</span></a><p class="text-slate-400 leading-relaxed">იმუნიზაციის ცენტრი 2000 წლიდან მოგემსახურებათ პროფესიონალური იმუნიზაციის სერვისებით.</p></div>
+        <div><h4 class="text-lg font-bold mb-6">ბმულები</h4><nav class="flex flex-col gap-3"><a href="index.html" class="text-slate-400 hover:text-primary-light">მთავარი</a><a href="about.html" class="text-slate-400 hover:text-primary-light">ჩვენ შესახებ</a><a href="services.html" class="text-slate-400 hover:text-primary-light">სერვისები</a><a href="blog.html" class="text-slate-400 hover:text-primary-light">ბლოგი</a><a href="contact.html" class="text-slate-400 hover:text-primary-light">დაგვიკავშირდით</a></nav></div>
+        <div><h4 class="text-lg font-bold mb-6">სერვისები</h4><nav class="flex flex-col gap-3"><a href="services.html#scheduled" class="text-slate-400 hover:text-primary-light">გეგმიური ვაქცინაცია</a><a href="services.html#rabies" class="text-slate-400 hover:text-primary-light">ანტირაბიული იმუნიზაცია</a><a href="services.html#travel" class="text-slate-400 hover:text-primary-light">მოგზაურთა ვაქცინაცია</a><a href="services.html#flu" class="text-slate-400 hover:text-primary-light">გრიპის ვაქცინაცია</a></nav></div>
+        <div><h4 class="text-lg font-bold mb-6">კონტაქტი</h4><div class="space-y-4"><div class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-primary-light shrink-0 mt-0.5"></i><span class="text-slate-400">თბილისი, ტაშკენტის ქ. 10ა</span></div><div class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-primary-light shrink-0"></i><a href="tel:032231228" class="text-slate-400 hover:text-primary-light">032 231 22 78</a></div><div class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-primary-light shrink-0"></i><a href="mailto:info@imuncentri.ge" class="text-slate-400 hover:text-primary-light">info@imuncentri.ge</a></div></div></div>
+      </div>
+      <div class="border-t border-slate-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500 text-sm">&copy; 2025 იმუნიზაციის ცენტრი. ყველა უფლება დაცულია.</p>
+        <div class="flex items-center gap-4 text-sm"><a href="privacy-policy.html" class="text-slate-500 hover:text-primary-light">პერსონალურ მონაცემთა დაცვის პოლიტიკა</a><span class="text-slate-600">|</span><a href="quality-policy.html" class="text-primary-light font-medium">ხარისხის პოლიტიკა</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

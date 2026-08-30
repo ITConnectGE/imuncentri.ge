@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>იმუნიზაციის ცენტრი | ვაქცინაცია თბილისში</title>
+  <meta name="description" content="იმუნიზაციის ცენტრი — პროფესიონალური ვაქცინაციის სერვისები თბილისში. გეგმიური და გადაუდებელი იმუნიზაცია, მოგზაურთა ვაქცინაცია, ანტირაბიული და ანტიტეტანური იმუნიზაცია 24/7.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E7C6B',
+            'primary-dark': '#0A5C50',
+            'primary-light': '#14B8A6',
+            secondary: '#1E293B',
+            accent: '#F59E0B',
+            'accent-hover': '#D97706',
+          },
+          fontFamily: {
+            'georgian': ['Noto Sans Georgian', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-georgian text-secondary antialiased">
+
+  <!-- Top Bar -->
+  <div class="bg-secondary text-white text-sm py-2 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="tel:032231228" class="flex items-center gap-2 hover:text-primary-light transition-colors">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>032 231 22 78</span>
+        </a>
+        <span class="text-slate-500">|</span>
+        <a href="mailto:info@imuncentri.ge" class="flex items-center gap-2 hover:text-primary-light transition-colors">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>info@imuncentri.ge</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          <span>თბილისი, ტაშკენტის ქ. 10ა</span>
+        </span>
+        <span class="text-slate-500">|</span>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary-light transition-colors" aria-label="Facebook">
+          <i data-lucide="facebook" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary-dark transition-colors">
+          <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+        </div>
+        <span class="text-xl font-bold text-secondary">იმუნიზაციის ცენტრი</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-primary font-semibold border-b-2 border-primary pb-1 transition-colors">მთავარი</a>
+        <a href="about.html" class="text-secondary hover:text-primary transition-colors">ჩვენ შესახებ</a>
+        <a href="services.html" class="text-secondary hover:text-primary transition-colors">სერვისები</a>
+        <a href="blog.html" class="text-secondary hover:text-primary transition-colors">ბლოგი</a>
+        <a href="contact.html" class="text-secondary hover:text-primary transition-colors">დაგვიკავშირდით</a>
+      </nav>
+      <div class="hidden lg:block">
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+          დაჯავშნე ვიზიტი
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <button id="mobile-menu-toggle" class="lg:hidden p-2 text-secondary hover:text-primary transition-colors" aria-label="მენიუ">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-full bg-white z-50 shadow-2xl p-8 translate-x-full transition-transform duration-300">
+    <div class="flex items-center justify-between mb-10">
+      <span class="text-lg font-bold text-secondary">მენიუ</span>
+      <button id="mobile-menu-close" class="p-2 text-secondary hover:text-primary transition-colors" aria-label="დახურვა">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6">
+      <a href="index.html" class="text-primary font-semibold text-lg">მთავარი</a>
+      <a href="about.html" class="text-secondary hover:text-primary transition-colors text-lg">ჩვენ შესახებ</a>
+      <a href="services.html" class="text-secondary hover:text-primary transition-colors text-lg">სერვისები</a>
+      <a href="blog.html" class="text-secondary hover:text-primary transition-colors text-lg">ბლოგი</a>
+      <a href="contact.html" class="text-secondary hover:text-primary transition-colors text-lg">დაგვიკავშირდით</a>
+      <hr class="border-slate-200">
+      <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+        დაჯავშნე ვიზიტი
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </nav>
+    <div class="mt-10 space-y-4 text-sm text-slate-500">
+      <a href="tel:032231228" class="flex items-center gap-2 hover:text-primary transition-colors">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        032 231 22 78
+      </a>
+      <a href="mailto:info@imuncentri.ge" class="flex items-center gap-2 hover:text-primary transition-colors">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        info@imuncentri.ge
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden min-h-[85vh] flex flex-col justify-center">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/75 to-primary-dark/60"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 py-20 lg:py-32">
+        <div class="max-w-3xl">
+          <div class="animate-on-scroll inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+            25+ წლიანი გამოცდილება
+          </div>
+          <h1 class="animate-on-scroll text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            იმუნიზაცია — შენი სიმშვიდის გარანტი
+          </h1>
+          <p class="animate-on-scroll text-lg md:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
+            მიიღე კონსულტაცია წამყვანი სპეციალისტებისგან საერთაშორისო გაიდლაინებისა და საქართველოს იმუნიზაციის ეროვნული კალენდრის გათვალისწინებით
+          </p>
+          <div class="animate-on-scroll flex flex-wrap gap-4">
+            <a href="services.html" class="btn-white inline-flex items-center gap-2 bg-white text-primary font-semibold px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors shadow-lg">
+              ჩვენი სერვისები
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="contact.html" class="btn inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
+              დაგვიკავშირდით
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Stats Bar -->
+      <div class="relative mt-auto">
+        <div class="max-w-7xl mx-auto px-4 pb-8 lg:pb-12">
+          <div class="animate-on-scroll bg-white/15 backdrop-blur-md rounded-2xl p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
+              <div class="flex flex-col items-center">
+                <span class="text-3xl md:text-4xl font-extrabold text-white mb-1">25+</span>
+                <span class="text-white/80 text-sm md:text-base">წლიანი გამოცდილება</span>
+              </div>
+              <div class="border-t md:border-t-0 md:border-l md:border-r border-white/20 pt-6 md:pt-0 flex flex-col items-center">
+                <span class="text-3xl md:text-4xl font-extrabold text-white mb-1">50,000+</span>
+                <span class="text-white/80 text-sm md:text-base">ვაქცინაცია ყოველწლიურად</span>
+              </div>
+              <div class="border-t md:border-t-0 pt-6 md:pt-0 flex flex-col items-center">
+                <span class="text-3xl md:text-4xl font-extrabold text-white mb-1">24/7</span>
+                <span class="text-white/80 text-sm md:text-base">გადაუდებელი მომსახურება</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-4">ჩვენი სერვისები</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary">პროფესიონალური სამედიცინო მომსახურება</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-primary/20 transition-all duration-300 group animate-on-scroll">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <i data-lucide="shield" class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-3">გეგმიური ვაქცინაცია</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">კვალიფიციური კონსულტაცია და ვაქცინაცია საქართველოში დარეგისტრირებული, ჯანდაცვის მსოფლიო ორგანიზაციის მიერ აღიარებული ვაქცინებით.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary-dark transition-colors">
+              გაიგე მეტი <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+          <!-- Service 2 -->
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-primary/20 transition-all duration-300 group animate-on-scroll">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <i data-lucide="alert-circle" class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-3">ანტირაბიული და ანტიტეტანური იმუნიზაცია</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">24/7 გადაუდებელი ქირურგიული მომსახურება. ექიმ-რაბიოლოგის კონსულტაცია და შესაბამისი ვაქცინაცია.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary-dark transition-colors">
+              გაიგე მეტი <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+          <!-- Service 3 -->
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-primary/20 transition-all duration-300 group animate-on-scroll">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <i data-lucide="plane" class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-3">მოგზაურთა ვაქცინაცია</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">ინდივიდუალური სქემის შერჩევა მოგზაურობის ქვეყნის ეპიდემიოლოგიური მდგომარეობის გათვალისწინებით.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary-dark transition-colors">
+              გაიგე მეტი <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+          <!-- Service 4 -->
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-primary/20 transition-all duration-300 group animate-on-scroll">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <i data-lucide="thermometer" class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-3">სეზონური გრიპის ვაქცინაცია</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">სეზონური გრიპის პროფილაქტიკის ერთადერთი ეფექტური გზა. ნებადართულია 6 თვის ასაკიდან.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary-dark transition-colors">
+              გაიგე მეტი <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="bg-slate-50 py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-4">რატომ ჩვენ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary">რატომ იმუნიზაციის ცენტრი?</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <!-- Feature 1 -->
+            <div class="flex gap-5 animate-on-scroll">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <i data-lucide="check-circle" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-secondary mb-2">უსაფრთხო და ეფექტური</h3>
+                <p class="text-slate-600 leading-relaxed">ვაქცინაცია ტარდება მხოლოდ საქართველოში დარეგისტრირებული და ჯანდაცვის მსოფლიო ორგანიზაციის მიერ აღიარებული ვაქცინებით.</p>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="flex gap-5 animate-on-scroll">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <i data-lucide="shield" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-secondary mb-2">დაავადების პრევენცია</h3>
+                <p class="text-slate-600 leading-relaxed">ვაქცინაცია ყველაზე ეფექტური გზაა ინფექციური დაავადებების თავიდან ასაცილებლად.</p>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex gap-5 animate-on-scroll">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <i data-lucide="award" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-secondary mb-2">მომსახურების მაღალი ხარისხი</h3>
+                <p class="text-slate-600 leading-relaxed">25 წელზე მეტი გამოცდილება და ISO 9001:2015 სერტიფიკაცია TUV-Austria-სგან.</p>
+              </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="flex gap-5 animate-on-scroll">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <i data-lucide="clock" class="w-6 h-6 text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-secondary mb-2">24/7 გადაუდებელი მომსახურება</h3>
+                <p class="text-slate-600 leading-relaxed">ანტირაბიული და ანტიტეტანური იმუნიზაცია ხელმისაწვდომია ყოველდღე, 24 საათის განმავლობაში.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Right Side Decorative Card -->
+          <div class="animate-on-scroll">
+            <div class="relative bg-primary rounded-2xl p-10 text-white overflow-hidden">
+              <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+              <div class="relative">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                  <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">ISO 9001:2015</h3>
+                <p class="text-white/85 leading-relaxed mb-6">სერტიფიცირებული TUV-Austria-ს მიერ. ხარისხის მართვის საერთაშორისო სტანდარტი გარანტიაა მომსახურების უმაღლესი დონისა.</p>
+                <div class="flex items-center gap-4">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-accent"></i>
+                    <span class="text-sm">სერტიფიცირებული</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-accent"></i>
+                    <span class="text-sm">აუდიტირებული</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white py-20">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-4">FAQ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary">ხშირად დასმული კითხვები</h2>
+        </div>
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">როდის შეიძლება ვაქცინაციისთვის მოსვლა?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">გადაუდებელი ანტირაბიული (ცოფის) და ანტიტეტანური იმუნიზაცია ხელმისაწვდომია ყოველდღე 24 საათის განმავლობაში, დასვენების დღეების ჩათვლით. ცოფის განმეორებით ვაქცინაციისთვის სასურველია მობრძანდეთ ყოველდღე 09:00-18:00 საათებში. სხვა ინფექციური დაავადებების საწინააღმდეგო გეგმიური ვაქცინაცია ტარდება ორშაბათიდან პარასკევის ჩათვლით, 10:00-17:30 საათებში.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">ვის სჭირდება და რატომ არის ცოფის აცრა აუცილებელი?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">ცოფი 100%-ით ლეტალური დაავადებაა — ცოფით დაავადებული ადამიანის გამოჯანმრთელების დადასტურებული შემთხვევა აღწერილი არ არის. სრულყოფილად აცრილ ადამიანებში ცოფის შემთხვევა არ გამოვლენილა.</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">ვის სჭირდება ტეტანუსის ვაქცინაცია?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">მიწით დაბინძურებული ჭრილობის შემთხვევაში აუცილებელია პაციენტს ჰქონდეს იმუნიტეტი ტეტანუსის წინააღმდეგ. ანტიტეტანური იმუნიზაცია ტარდება თუ პაციენტი არ არის აცრილი ბოლო 10 წლის განმავლობაში.</p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">შეიძლება ექიმს გავესაუბრო?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">სატელეფონო საუბრით პაციენტის მდგომარეობის შეფასება რეკომენდებული არ არის. აუცილებელია ექიმთან ვიზიტი. კონსულტაცია უფასოა.</p>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">რა ღირს ცოფის და ტეტანუსის აცრა?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">გადაუდებელი ვაქცინაცია ფინანსდება საყოველთაო და/ან კერძო დაზღვევის ფარგლებში. აუცილებლია პირადობის დამადასტურებელი მოწმობის წარდგენა.</p>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">ცოფზე საეჭვო ცხოველის მიერ დაზიანების შემთხვევაში რამდენ ხანში უნდა მივმართოთ კლინიკას?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">რაც შეიძლება მოკლე დროში. ყოველი საათი მნიშვნელოვანია.</p>
+            </div>
+          </div>
+          <!-- FAQ 7 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">გაიცემა თუ არა ვაქცინაციის ცნობა/სერთიფიკატი?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">დიახ, გაიცემა. მათ შორის ყვითალი ცხელების ვაქცინაციის შემთხვევაში საერთაშორისო ყვითალი სერთიფიკატი.</p>
+            </div>
+          </div>
+          <!-- FAQ 8 -->
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden animate-on-scroll">
+            <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors">
+              <span class="font-semibold text-secondary pr-4">შეიძლება რამოდენიმე ვაქცინის ერთდროულად გაკეთება?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+              <p class="text-slate-600 leading-relaxed px-6 pb-6">შეიძლება, მაგრამ საჭიროა გაიაროთ კონსულტაცია ინდივიდუალური სქემის შესარჩევად.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-primary py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="inline-block bg-white/15 text-white font-semibold px-4 py-2 rounded-full text-sm mb-4">ჩვენი პაციენტები</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">რას ამბობენ ჩვენი პაციენტები</h2>
+        </div>
+        <div class="relative max-w-3xl mx-auto">
+          <div id="testimonial-slider" class="relative">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center">
+                <div class="flex justify-center mb-6">
+                  <i data-lucide="quote" class="w-10 h-10 text-accent"></i>
+                </div>
+                <p class="text-white text-lg md:text-xl leading-relaxed mb-8">პროფესიონალური მომსახურება და მეგობრული გარემო. ექიმებმა დეტალურად ამიხსნეს ვაქცინაციის მთელი პროცესი.</p>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                </div>
+                <span class="text-white/80 font-medium">ანა გ.</span>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="testimonial-slide hidden">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center">
+                <div class="flex justify-center mb-6">
+                  <i data-lucide="quote" class="w-10 h-10 text-accent"></i>
+                </div>
+                <p class="text-white text-lg md:text-xl leading-relaxed mb-8">24 საათიანი მომსახურება ძალიან მოსახერხებელია. სწრაფად და ეფექტურად მომემსახურნენ.</p>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                </div>
+                <span class="text-white/80 font-medium">გიორგი მ.</span>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="testimonial-slide hidden">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center">
+                <div class="flex justify-center mb-6">
+                  <i data-lucide="quote" class="w-10 h-10 text-accent"></i>
+                </div>
+                <p class="text-white text-lg md:text-xl leading-relaxed mb-8">შვილების ვაქცინაციისთვის ყოველთვის აქ მოვდივართ. სანდო და გამოცდილი სპეციალისტები.</p>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 text-accent fill-current"></i>
+                </div>
+                <span class="text-white/80 font-medium">მარიამ ჯ.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="flex items-center justify-center gap-6 mt-8">
+            <button id="testimonial-prev" class="w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors" aria-label="წინა">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-3" id="testimonial-dots">
+              <span class="testimonial-dot w-3 h-3 rounded-full cursor-pointer bg-white" data-index="0"></span>
+              <span class="testimonial-dot w-3 h-3 rounded-full cursor-pointer bg-white/40" data-index="1"></span>
+              <span class="testimonial-dot w-3 h-3 rounded-full cursor-pointer bg-white/40" data-index="2"></span>
+            </div>
+            <button id="testimonial-next" class="w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors" aria-label="შემდეგი">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">გჭირდებათ კონსულტაცია?</h2>
+        <p class="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">დაგვიკავშირდით და მიიღეთ პროფესიონალური რჩევა ჩვენი გამოცდილი სპეციალისტებისგან</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-lg shadow-primary/25">
+          დაგვიკავშირდით
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Column 1: Logo & Description -->
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-6 group">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+            </div>
+            <span class="text-xl font-bold text-white">იმუნიზაციის ცენტრი</span>
+          </a>
+          <p class="text-slate-400 leading-relaxed">იმუნიზაციის ცენტრი 2000 წლიდან მოგემსახურებათ პროფესიონალური იმუნიზაციის სერვისებით.</p>
+        </div>
+        <!-- Column 2: Links -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">ბმულები</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="index.html" class="text-slate-400 hover:text-primary-light transition-colors">მთავარი</a>
+            <a href="about.html" class="text-slate-400 hover:text-primary-light transition-colors">ჩვენ შესახებ</a>
+            <a href="services.html" class="text-slate-400 hover:text-primary-light transition-colors">სერვისები</a>
+            <a href="blog.html" class="text-slate-400 hover:text-primary-light transition-colors">ბლოგი</a>
+            <a href="contact.html" class="text-slate-400 hover:text-primary-light transition-colors">დაგვიკავშირდით</a>
+          </nav>
+        </div>
+        <!-- Column 3: Services -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">სერვისები</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="services.html" class="text-slate-400 hover:text-primary-light transition-colors">გეგმიური ვაქცინაცია</a>
+            <a href="services.html" class="text-slate-400 hover:text-primary-light transition-colors">ანტირაბიული იმუნიზაცია</a>
+            <a href="services.html" class="text-slate-400 hover:text-primary-light transition-colors">მოგზაურთა ვაქცინაცია</a>
+            <a href="services.html" class="text-slate-400 hover:text-primary-light transition-colors">გრიპის ვაქცინაცია</a>
+          </nav>
+        </div>
+        <!-- Column 4: Contact -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">კონტაქტი</h4>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-primary-light flex-shrink-0 mt-0.5"></i>
+              <span class="text-slate-400">თბილისი, ტაშკენტის ქ. 10ა</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-primary-light flex-shrink-0"></i>
+              <a href="tel:032231228" class="text-slate-400 hover:text-primary-light transition-colors">032 231 22 78</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-5 h-5 text-primary-light flex-shrink-0"></i>
+              <a href="mailto:info@imuncentri.ge" class="text-slate-400 hover:text-primary-light transition-colors">info@imuncentri.ge</a>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-primary-light flex-shrink-0 mt-0.5"></i>
+              <span class="text-slate-400">ორშ-პარ: 10:00-17:30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="border-t border-slate-700 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-slate-500 text-sm">&copy; 2025 იმუნიზაციის ცენტრი. ყველა უფლება დაცულია.</p>
+          <div class="flex items-center gap-4 text-sm">
+            <a href="privacy-policy.html" class="text-slate-500 hover:text-primary-light transition-colors">პერსონალურ მონაცემთა დაცვის პოლიტიკა</a>
+            <span class="text-slate-600">|</span>
+            <a href="quality-policy.html" class="text-slate-500 hover:text-primary-light transition-colors">ხარისხის პოლიტიკა</a>
+          </div>
+          <div class="flex items-center gap-2 text-slate-500 text-sm">
+            <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+            <span>ISO 9001:2015</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
