@@ -85,3 +85,120 @@ html {
 .ic-form-note a {
   color: #2563eb;
 }
+
+/* ---------------------------------------------------------- accessibility */
+
+/* The theme sets outline: none on interactive elements with nothing in its
+   place, so keyboard focus was completely invisible. :focus-visible keeps it
+   off for mouse users. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #1d4ed8 !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Same ring in white where the focused element sits on the blue footer */
+.elementor-location-footer a:focus-visible,
+.elementor-location-footer button:focus-visible {
+  outline-color: #ffffff !important;
+}
+
+/* Skip past the header, which is otherwise ~10 tab stops on every page */
+.ic-skip-link {
+  /* fixed, not absolute: an absolutely positioned skip link is placed against
+     the document, so focusing it part-way down the page puts it off-screen */
+  position: fixed;
+  left: 16px;
+  top: -100px;
+  z-index: 100000;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #1d4ed8;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+  transition: top .15s ease;
+}
+
+.ic-skip-link:focus {
+  top: 0;
+}
+
+/* #top / #colophon / the popup anchors jumped instantly */
+html {
+  scroll-behavior: smooth;
+}
+
+/* The hero title is now an <h1>; hold its original size against any global
+   h1 rule in the theme. */
+.ic-hero-title {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+/* Elementor animates almost every section in on scroll. Honour the system
+   setting instead of overriding it. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Elementor hides these until its scroll observer fires; with animation
+     disabled they must not stay invisible. */
+  .elementor-invisible {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ------------------------------------------------------------------ touch */
+
+/* Menu and footer links were 20–30px tall, well under the 44px target. The
+   padding is added on touch-sized viewports only, so the desktop header keeps
+   its proportions. */
+@media (max-width: 1024px) {
+  .elementor-nav-menu a,
+  .hfe-nav-menu a,
+  .elementor-icon-list-item > a,
+  .ic-contact-list li > a,
+  .elementor-social-icon {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .elementor-social-icon {
+    min-width: 44px;
+    justify-content: center;
+  }
+}
+
+/* Anything that reacts to a click should say so */
+a,
+button,
+.open-popup,
+.close-btn,
+[role="button"] {
+  cursor: pointer;
+}
+
+.close-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
