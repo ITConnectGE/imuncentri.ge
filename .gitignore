@@ -2,3 +2,6 @@
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# ops artifact, not part of the site
+_dns-cloudflare-import.txt
