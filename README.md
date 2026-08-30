@@ -38,3 +38,12 @@ wget --mirror --page-requisites --convert-links \
 1. `?ver=…` სუფიქსების მოშორება asset-ების სახელებიდან (თორემ Content-Type არასწორია და CSS/JS არ ჩაიტვირთება);
 2. `?p=346|425|448` ბმულების ჩანაცვლება `about/`, `blog/`, `services/`-ით;
 3. ქართულსახელიანი ფაილების ხელახლა ჩამოტვირთვა (wget-ი Windows-ზე მათ სახელებს აზიანებს).
+4. runtime-only რესურსების ჩამოტვირთვა — Elementor-ის webpack lazy chunk-ები
+   (`elementorFrontendConfig.urls.assets`-იდან იტვირთება), swiper/dialog/share-link,
+   WordPress-ის emoji და interactivity სკრიპტები, და Essential Addons-ის გალერეის
+   სურათები (მისი კონფიგი აბსოლუტურ URL-ებს შეიცავს). wget მათ ვერ ხედავს,
+   რადგან მხოლოდ JavaScript-იდან არიან მითითებული;
+5. დარჩენილი `https://imuncentri.ge/wp-content|wp-includes/…` აბსოლუტური URL-ების
+   ჩანაცვლება გვერდის შესაბამისი ფარდობითი გზით (JSON-escaped `\/` ფორმითაც);
+6. `#fragment` ბმულების აღდგენა — wget-ი მათ სრულ URL-ებად აქცევს და ეს
+   სერვისების popup-ებს ტეხს (`querySelector(href)`).
