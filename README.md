@@ -10,9 +10,10 @@
 | `/` | მთავარი |
 | `/about/` | ჩვენ შესახებ |
 | `/services/` | სერვისები (`?popup=popup1..4` — სერვისის დეტალები) |
-| `/blog/` | ბლოგი |
 | `/contact/` | კონტაქტი |
 | `/sample-page/` | WordPress-ის ნაგულისხმევი გვერდი |
+
+ბლოგის გვერდი ამოღებულია — მისი ბმული ყველა მენიუდან წაშლილია.
 
 `wp-content/` და `wp-includes/` — ორიგინალი თემის, Elementor-ის და ატვირთული მედიის ფაილები.
 
@@ -36,7 +37,7 @@ wget --mirror --page-requisites --convert-links \
 ჩამოტვირთვის შემდეგ საჭიროა:
 
 1. `?ver=…` სუფიქსების მოშორება asset-ების სახელებიდან (თორემ Content-Type არასწორია და CSS/JS არ ჩაიტვირთება);
-2. `?p=346|425|448` ბმულების ჩანაცვლება `about/`, `blog/`, `services/`-ით;
+2. `?p=346|448` ბმულების ჩანაცვლება `about/`, `services/`-ით;
 3. ქართულსახელიანი ფაილების ხელახლა ჩამოტვირთვა (wget-ი Windows-ზე მათ სახელებს აზიანებს).
 4. runtime-only რესურსების ჩამოტვირთვა — Elementor-ის webpack lazy chunk-ები
    (`elementorFrontendConfig.urls.assets`-იდან იტვირთება), swiper/dialog/share-link,
