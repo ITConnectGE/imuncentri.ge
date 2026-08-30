@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'firago';
+					src: url('14firago.woff2') format('woff2'),
+						url('14firago.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.firago{font-family: 'firago' !important;}
+
+						h1, h2, h3, h4, h5, h6, .entry-title, body.single-post .entry-title, body.page .entry-title, body.category .entry-title, .widget-title, .site-title, .site-description, body, p, blockquote, li, a, strong, b, em, .menu-header-container li a, .menu-header-container li span, #menu-header li a, #menu-header li span{
+					font-family: 'firago' !important;
+				}
+		
