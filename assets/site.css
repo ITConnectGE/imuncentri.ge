@@ -1,0 +1,87 @@
+/* Site-level fixes layered on top of the Elementor output.
+   Kept in one file so the mirrored theme/plugin CSS stays untouched. */
+
+/* Elementor's populated wrap overflows the viewport by a few pixels and puts a
+   horizontal scrollbar on every page.
+
+   `clip` rather than `hidden`, and only on the root: `overflow-x: hidden` on
+   html *and* body turns body into a scroll container and stops the page
+   scrolling at all. `clip` trims the overflow without creating one. */
+html {
+  overflow-x: clip;
+}
+
+/* ---------------------------------------------------------------- contact */
+
+/* The map opened the page at full viewport height and pushed every piece of
+   contact information below the fold. It now sits under the form at a size
+   that still shows the surrounding streets. */
+.ic-map .elementor-custom-embed,
+.ic-map iframe {
+  height: 420px !important;
+  min-height: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .ic-map .elementor-custom-embed,
+  .ic-map iframe {
+    height: 300px !important;
+  }
+}
+
+/* Page title */
+.ic-page-title {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: #1a1a1a;
+}
+
+.ic-page-title + .ic-page-lead {
+  margin: 0;
+  color: #5a5a5a;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Contact rows: make the whole row read as one tappable line */
+.ic-contact-list .elementor-icon-list-item > a {
+  border-radius: 8px;
+  padding: 2px 6px;
+  margin-left: -6px;
+  transition: background-color .15s ease;
+}
+
+.ic-contact-list .elementor-icon-list-item > a:hover,
+.ic-contact-list .elementor-icon-list-item > a:focus-visible {
+  background-color: rgba(37, 99, 235, .08);
+}
+
+.ic-contact-list .elementor-icon-list-item > a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* A row that is plain information rather than a link should not look clickable */
+.ic-contact-list .ic-static > span {
+  cursor: default;
+}
+
+/* ------------------------------------------------------------------- form */
+
+/* Mark the fields that must be filled in */
+.elementor-field-group > label .ic-req {
+  color: #d21c1c;
+  margin-left: 2px;
+}
+
+.ic-form-note {
+  margin: 14px 0 0;
+  font-size: .875rem;
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+
+.ic-form-note a {
+  color: #2563eb;
+}
