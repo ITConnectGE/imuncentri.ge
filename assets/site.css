@@ -189,6 +189,42 @@ html {
   }
 }
 
+/* Standalone links that were 19–22px tall on a phone: the flip-box service
+   titles and the two policy links in the footer. inline-flex rather than flex,
+   so a link that happens to sit in a run of text is not turned into a block.
+
+   Links inside a sentence are left alone on purpose — WCAG 2.5.5 exempts a
+   target that is "in a sentence or block of text", and padding them out would
+   break the line box. */
+@media (max-width: 1024px) {
+  .elementor-flip-box a,
+  .elementor-icon-box-title a,
+  .elementor-heading-title > a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* back to top: a 32px icon in the footer */
+  a[href="#top"].elementor-icon {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* The flip-box descriptions render at 13px, which is small for body copy on a
+   phone or tablet. Nudged up; measured at 390px the tallest of them is 152px
+   inside a 281px card, so nothing clips. */
+@media (max-width: 1024px) {
+  .elementor-flip-box__layer__description {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+  }
+}
+
 /* Anything that reacts to a click should say so */
 a,
 button,
